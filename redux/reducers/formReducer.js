@@ -1,3 +1,5 @@
+import { SET_PURPOSE, SET_ANIMAL, SET_LOCATION, SET_DATE } from './../actionTypes';
+
 const initialState = {
   purpose: null,
   animal: null,
@@ -7,25 +9,25 @@ const initialState = {
  
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_LOCATION':
-      return {
-        ...state,
-        location: action.payload,
-      };
-    case 'SET_DATE':
-      return {
-        ...state,
-        date: action.payload,
-      };
-    case 'SET_PURPOSE':
+    case SET_PURPOSE:
       return {
         ...state,
         purpose: action.payload,
       };
-    case 'SET_ANIMAL':
+    case SET_ANIMAL:
       return {
         ...state,
         animal: action.payload,
+      };
+    case SET_LOCATION:
+      return {
+        ...state,
+        location: action.payload,
+      };
+    case SET_DATE:
+      return {
+        ...state,
+        date: action.payload,
       };
     default:
       return state;

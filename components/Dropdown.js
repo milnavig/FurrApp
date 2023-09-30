@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     shadowOffset: { height: 4, width: 0 },
     shadowOpacity: 0.5,
-    elevation: 2, // Add shadow for Android devices
+    elevation: 3, // Add shadow for Android devices
     borderTopLeftRadius: 0, 
     borderTopRightRadius: 0, 
     borderBottomLeftRadius: 10, 

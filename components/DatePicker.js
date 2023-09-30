@@ -32,7 +32,7 @@ export const DatePicker = () => {
         style={styles.datePickerBlock}
         onPress={showDatepicker}
       >
-        <Text style={styles.text}>Today</Text>
+        <Text style={styles.text}>{date}</Text>
         <IconFeather name="calendar" style={styles.calendarIcon} size={25} />
       </TouchableOpacity>
       {show && (

@@ -34,7 +34,7 @@ export const LocationPicker = () => {
         onPress={getLocation}
       >
         <Text style={styles.text}>
-          { location ? "Location" : "Nearby" }
+          { location ? "Nearby" : "Location" }
         </Text>
         <IconEvilIcons name="location" style={styles.locationIcon} size={30} />
       </TouchableOpacity>

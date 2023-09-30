@@ -34,7 +34,7 @@ const Card = ({data}) => {
       </View>
       <View style={styles.footer}>
         <Text style={[ styles.text, styles.statusText ]}>
-          Available Today
+          Available { data.date }
         </Text>
         <CustomButton title="Book"></CustomButton>
       </View>

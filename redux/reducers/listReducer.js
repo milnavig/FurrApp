@@ -1,3 +1,5 @@
+import { SET_LIST, SET_FILTERED_LIST } from './../actionTypes';
+
 const initialState = {
   doctors: [],
   filtered_doctors: [],
@@ -5,12 +7,12 @@ const initialState = {
  
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_LIST':
+    case SET_LIST:
       return {
         ...state,
         doctors: action.payload,
       };
-    case 'SET_FILTERED_LIST':
+    case SET_FILTERED_LIST:
       return {
         ...state,
         filtered_doctors: action.payload,
