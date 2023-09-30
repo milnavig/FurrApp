@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import * as Font from 'expo-font';
 import { 
   StyleSheet, 
   Text, 
@@ -8,11 +9,12 @@ import {
   ImageBackground 
 } from 'react-native';
 import { Provider } from 'react-redux';
-import * as Font from 'expo-font';
+import { store } from './redux/store';
+
 import Menu from './components/Menu';
 import SearchBox from './components/SearchBox';
 import CardList from './components/CardList';
-import { store } from './redux/store';
+
 import bgImage from './assets/bg.png';
 
 const loadFonts = async () => {

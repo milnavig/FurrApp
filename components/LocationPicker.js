@@ -28,15 +28,15 @@ export const LocationPicker = () => {
   }
   
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={ styles.container }>
       <TouchableOpacity
-        style={styles.locationPickerBlock}
-        onPress={getLocation}
+        style={ styles.locationPickerBlock }
+        onPress={ getLocation }
       >
-        <Text style={styles.text}>
+        <Text style={ styles.text }>
           { location ? "Nearby" : "Location" }
         </Text>
-        <IconEvilIcons name="location" style={styles.locationIcon} size={30} />
+        <IconEvilIcons name="location" style={ styles.locationIcon } size={30} />
       </TouchableOpacity>
     </SafeAreaView>
   );
@@ -58,8 +58,8 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: 'Outfit', 
-    
     fontSize: 13,
+    fontWeight: 'bold',
     flex: 1,
   },
   locationIcon: {

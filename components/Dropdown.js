@@ -39,11 +39,11 @@ const Dropdown = ({ label, data, onSelect }) => {
   };
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity style={styles.item} onPress={() => onItemPress(item)}>
-      <Text style={[styles.text, styles.itemText]}>{item.label}</Text>
+    <TouchableOpacity style={ styles.item } onPress={() => onItemPress(item)}>
+      <Text style={[ styles.text, styles.itemText ]}>{ item.label }</Text>
       {
         selected.value === item.value ? 
-        <IconAntDesign name="check" style={styles.iconCheck} size={15} />
+        <IconAntDesign name="check" style={ styles.iconCheck } size={15} />
         : null
       }
     </TouchableOpacity>
@@ -51,16 +51,16 @@ const Dropdown = ({ label, data, onSelect }) => {
 
   const renderDropdown = () => {
     return (
-      <Modal visible={visible} transparent animationType="none">
+      <Modal visible={ visible } transparent animationType="none">
         <TouchableOpacity
-          style={styles.overlay}
+          style={ styles.overlay }
           onPress={() => setVisible(false)}
         >
-          <View style={[styles.dropdown, { top: dropdownTop, left: dropdownMarginLeft, width: dropdownWidth }]}>
+          <View style={[ styles.dropdown, { top: dropdownTop, left: dropdownMarginLeft, width: dropdownWidth } ]}>
             <FlatList
-              data={data}
-              renderItem={renderItem}
-              keyExtractor={(item, index) => index.toString()}
+              data={ data }
+              renderItem={ renderItem }
+              keyExtractor={ (item, index) => index.toString() }
             />
           </View>
         </TouchableOpacity>
@@ -70,15 +70,15 @@ const Dropdown = ({ label, data, onSelect }) => {
 
   return (
     <TouchableOpacity
-      ref={DropdownButton}
-      style={styles.button}
-      onPress={toggleDropdown}
+      ref={ DropdownButton }
+      style={ styles.button }
+      onPress={ toggleDropdown }
     >
-      {renderDropdown()}
-      <Text style={[styles.text, styles.buttonText]}>
-        {(!!selected && selected.label) || label}
+      { renderDropdown() }
+      <Text style={[ styles.text, styles.buttonText ]}>
+        { (!!selected && selected.label) || label }
       </Text>
-      <IconEntypo name="chevron-small-down" style={styles.iconDown} size={30} />
+      <IconEntypo name="chevron-small-down" style={ styles.iconDown } size={30} />
     </TouchableOpacity>
   );
 };
@@ -105,7 +105,6 @@ const styles = StyleSheet.create({
     color: '#08182F',
   },
   iconDown: {
-    
     color: '#A3A3A3',
   },
   iconCheck: {

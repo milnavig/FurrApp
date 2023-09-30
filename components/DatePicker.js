@@ -27,22 +27,22 @@ export const DatePicker = () => {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={ styles.container }>
       <TouchableOpacity
-        style={styles.datePickerBlock}
-        onPress={showDatepicker}
+        style={ styles.datePickerBlock }
+        onPress={ showDatepicker }
       >
-        <Text style={styles.text}>{date}</Text>
-        <IconFeather name="calendar" style={styles.calendarIcon} size={25} />
+        <Text style={ styles.text }>{ date }</Text>
+        <IconFeather name="calendar" style={ styles.calendarIcon } size={25} />
       </TouchableOpacity>
       {show && (
         <DateTimePicker
           testID="dateTimePicker"
           dateFormat="month day year"
-          value={new Date(date)}
+          value={ new Date(date) }
           mode="date"
-          is24Hour={true}
-          onChange={onChange}
+          is24Hour={ true }
+          onChange={ onChange }
         />
       )}
     </SafeAreaView>
@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: 'Outfit', 
     fontSize: 13,
+    fontWeight: 'bold',
     flex: 1,
   },
   calendarIcon: {

@@ -13,6 +13,20 @@ import { setPurpose, setAnimal } from '../redux/actions/formAction';
 
 import haversine from '../utils/haversineDistance';
 
+const purposes = [
+  { label: 'Pass the Tests', value: '1' },
+  { label: 'Install Chip', value: '2' },
+  { label: 'Diagnose', value: '3' },
+  { label: 'Get Vaccinated', value: '4' },
+];
+
+const animals = [
+  { label: 'Cat', value: '1' },
+  { label: 'Dog', value: '2' },
+  { label: 'Snake', value: '3' },
+  { label: 'Parrot', value: '4' },
+];
+
 const SearchBox = () => {
   const dispatch = useDispatch();
  
@@ -20,20 +34,6 @@ const SearchBox = () => {
 
   const userLocation = useSelector((store) => store.form.location);
   const userDate = useSelector((store) => store.form.date);
-
-  const purposes = [
-    { label: 'Pass the Tests', value: '1' },
-    { label: 'Install Chip', value: '2' },
-    { label: 'Diagnose', value: '3' },
-    { label: 'Get Vaccinated', value: '4' },
-  ];
-
-  const animals = [
-    { label: 'Cat', value: '1' },
-    { label: 'Dog', value: '2' },
-    { label: 'Snake', value: '3' },
-    { label: 'Parrot', value: '4' },
-  ];
 
   const setUserPurpose = (purpose) => {
     dispatch(setPurpose(purpose));
@@ -71,15 +71,15 @@ const SearchBox = () => {
   }
 
   return (
-    <View style={styles.searchBox}>
-      <Dropdown label="Select purpose" data={purposes} onSelect={setUserPurpose} />
-      <Dropdown label="Select Animal" data={animals} onSelect={setUserAnimal} />
-      <View style={styles.pickersBlock}>
+    <View style={ styles.searchBox }>
+      <Dropdown label="Select purpose" data={ purposes } onSelect={ setUserPurpose } />
+      <Dropdown label="Select Animal" data={ animals } onSelect={ setUserAnimal } />
+      <View style={ styles.pickersBlock }>
         <DatePicker></DatePicker>
         <LocationPicker></LocationPicker>
       </View>
-      <View style={styles.button}>
-        <CustomButton title={"Search".toUpperCase()} onPress={searchDoctors}></CustomButton>
+      <View style={ styles.button }>
+        <CustomButton title={ "Search".toUpperCase() } onPress={ searchDoctors }></CustomButton>
       </View>
       
     </View>

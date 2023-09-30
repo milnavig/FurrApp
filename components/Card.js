@@ -10,20 +10,20 @@ import CustomButton from './CustomButton';
 
 const Card = ({data}) => {
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Image source={data.photo} style={styles.avatar} />
-        <View style={styles.doctorInfo}>
+    <View style={ styles.container }>
+      <View style={ styles.header }>
+        <Image source={ data.photo } style={ styles.avatar } />
+        <View style={ styles.doctorInfo }>
           <Text style={[ styles.text, styles.nameText ]}>{ data.name }</Text>
           <Text style={[ styles.text, styles.fieldText ]}>{ data.field }</Text>
         </View>
-        <View style={styles.ratingBlock}>
-          <IconEntypo name="star" style={styles.starIcon} size={15} />
+        <View style={ styles.ratingBlock }>
+          <IconEntypo name="star" style={ styles.starIcon } size={15} />
           <Text style={[ styles.text, styles.ratingText ]}>{ data.rating }</Text>
         </View>
       </View>
-      <View style={styles.locationBlock}>
-        <IconEvilIcons name="location" style={styles.locationIcon} size={20} />
+      <View style={ styles.locationBlock }>
+        <IconEvilIcons name="location" style={ styles.locationIcon } size={20} />
         <Text style={[ styles.text, styles.locationText ]}>
           { data.address }
           <Text style={[ styles.text, styles.separator ]}> · </Text>
@@ -32,7 +32,7 @@ const Card = ({data}) => {
           </Text>
         </Text>
       </View>
-      <View style={styles.footer}>
+      <View style={ styles.footer }>
         <Text style={[ styles.text, styles.statusText ]}>
           Available { data.date }
         </Text>

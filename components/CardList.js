@@ -27,19 +27,19 @@ const CardList = () => {
   }
 
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={[styles.text, styles.headerTitle]}>
+    <View style={ styles.container }>
+      <View style={ styles.header }>
+        <Text style={[ styles.text, styles.headerTitle ]}>
           Nearby Vets
         </Text>
-        <TouchableOpacity onPress={viewAll}>
+        <TouchableOpacity onPress={ viewAll }>
           <Text style={[ styles.text, styles.buttonText ]}>View All</Text>
         </TouchableOpacity>
       </View>
       {
         filteredDoctors.length ?
         filteredDoctors.map((item) => <Card data={ item } key={ item.id }></Card>)
-        : <Text style={[styles.text, styles.infoText]}>No available vets</Text>
+        : <Text style={[ styles.text, styles.infoText ]}>No available vets</Text>
       }
     </View>
   );
