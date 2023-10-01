@@ -13,6 +13,8 @@ import { setPurpose, setAnimal } from '../redux/actions/formAction';
 
 import haversine from '../utils/haversineDistance';
 
+import { theme } from './../styles/colors';
+
 const purposes = [
   { label: 'Pass the Tests', value: '1' },
   { label: 'Install Chip', value: '2' },
@@ -90,7 +92,7 @@ const styles = StyleSheet.create({
   searchBox: {
     margin: 20,
     padding: 10,
-    backgroundColor: '#fff',
+    backgroundColor: theme.whiteColor,
     borderRadius: 10,
   },
   pickersBlock: {

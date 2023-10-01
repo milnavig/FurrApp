@@ -15,6 +15,7 @@ import Menu from './components/Menu';
 import SearchBox from './components/SearchBox';
 import CardList from './components/CardList';
 
+import { theme } from './styles/colors';
 import bgImage from './assets/bg.png';
 
 const loadFonts = async () => {
@@ -54,7 +55,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F6F7FB',
+    backgroundColor: theme.backgroundColor,
     paddingTop: StatusBar.currentHeight,
   },
   bgImage: {

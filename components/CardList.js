@@ -10,6 +10,7 @@ import Card from './Card';
 import { fill, fillFiltered } from '../redux/actions/listAction';
 
 import doctorsList from '../assets/doctors_data';
+import { theme } from './../styles/colors';
 
 const CardList = () => {
   const dispatch = useDispatch();
@@ -58,14 +59,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   headerTitle: {
-    color: '#08182F',
+    color: theme.darkBlueColor,
     fontWeight: 900,
     fontSize: 18,
   },
   buttonText: {
     fontSize: 13,
     fontWeight: 800,
-    color: '#2F5EA0',
+    color: theme.blueColor,
   },
   infoText: {
     paddingVertical: 20,

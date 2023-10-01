@@ -11,6 +11,8 @@ import {
 import IconEntypo from 'react-native-vector-icons/Entypo';
 import IconAntDesign from 'react-native-vector-icons/AntDesign';
 
+import { theme } from './../styles/colors';
+
 const Dropdown = ({ label, data, onSelect }) => {
   const DropdownButton = useRef();
   const [visible, setVisible] = useState(false);
@@ -88,11 +90,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 20,
-    backgroundColor: '#fff',
+    backgroundColor: theme.whiteColor,
     height: 50,
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: '#E9E8E8',
+    borderColor: theme.borderColor,
     marginBottom: 10,
   },
   text: {
@@ -102,19 +104,19 @@ const styles = StyleSheet.create({
   buttonText: {
     flex: 1,
     fontWeight: 700,
-    color: '#08182F',
+    color: theme.darkBlueColor,
   },
   iconDown: {
-    color: '#A3A3A3',
+    color: theme.darkGreyColor,
   },
   iconCheck: {
     marginRight: 10,
-    color: '#4DC175',
+    color: theme.greenColor,
   },
   dropdown: {
     position: 'absolute',
-    backgroundColor: '#fff',
-    shadowColor: '#000000',
+    backgroundColor: theme.whiteColor,
+    shadowColor: theme.blackColor,
     shadowRadius: 4,
     shadowOffset: { height: 4, width: 0 },
     shadowOpacity: 0.5,
@@ -136,7 +138,7 @@ const styles = StyleSheet.create({
   itemText: {
     flex: 1,
     fontWeight: 700,
-    color: '#08182F',
+    color: theme.darkBlueColor,
   },
 });
 

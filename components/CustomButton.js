@@ -1,5 +1,7 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
+import { theme } from './../styles/colors';
+
 const CustomButton = ({ title, onPress }) => {
   return (
     <TouchableOpacity onPress={ onPress }>
@@ -12,7 +14,7 @@ const CustomButton = ({ title, onPress }) => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#2F5EA0',
+    backgroundColor: theme.blueColor,
     paddingVertical: 8,
     paddingHorizontal: 20,
     borderRadius: 22,
@@ -22,7 +24,7 @@ const styles = StyleSheet.create({
     fontWeight: 700,
   },
   buttonText: {
-    color: '#fff',
+    color: theme.whiteColor,
     fontSize: 13,
     textAlign: 'center',
   },

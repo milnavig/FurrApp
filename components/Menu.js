@@ -7,6 +7,8 @@ import IconOcticons from 'react-native-vector-icons/Octicons';
 import IconFeather from 'react-native-vector-icons/Feather';
 import IconIonicons from 'react-native-vector-icons/Ionicons';
 
+import { theme } from './../styles/colors';
+
 const Menu = () => {
   return (
     <View style={ styles.container }>
@@ -38,7 +40,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     paddingVertical: 10,
-    backgroundColor: '#fff',
+    backgroundColor: theme.whiteColor,
   },
   button: {
     flex: 1,
@@ -46,10 +48,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   activeButton: {
-    color: '#FF974D',
+    color: theme.orangeColor,
   },
   nonActiveButton: {
-    color: '#C8C3BE',
+    color: theme.mediumGreyColor,
   }
 });
 

@@ -8,6 +8,8 @@ import IconEntypo from 'react-native-vector-icons/Entypo';
 import IconEvilIcons from 'react-native-vector-icons/EvilIcons';
 import CustomButton from './CustomButton';
 
+import { theme } from './../styles/colors';
+
 const Card = ({data}) => {
   return (
     <View style={ styles.container }>
@@ -45,7 +47,7 @@ const Card = ({data}) => {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    backgroundColor: '#fff',
+    backgroundColor: theme.whiteColor,
     borderRadius: 10,
     marginVertical: 10,
   },
@@ -67,24 +69,24 @@ const styles = StyleSheet.create({
   nameText: { 
     fontSize: 14,
     fontWeight: 800,
-    color: '#08182F',
+    color: theme.darkBlueColor,
   },
   fieldText: {
     fontSize: 11,
     fontWeight: 500,
-    color: '#08182F',
+    color: theme.darkBlueColor,
   },
   ratingBlock: {
     flexDirection: 'row',
     paddingTop: 5,
   },
   starIcon: {
-    color: '#FFBA07',
+    color: theme.yellowColor,
   },
   ratingText: {
     fontSize: 14,
     fontWeight: 800,
-    color: '#FFBA07',
+    color: theme.yellowColor,
     paddingLeft: 5,
   },
   locationBlock: {
@@ -92,24 +94,24 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     borderBottomWidth: 2,
-    borderColor: '#F6F7FB',
+    borderColor: theme.lightGreyColor,
   },
   locationIcon: {
-    color: '#FF974D',
+    color: theme.orangeColor,
   },
   locationText: {
     fontSize: 12,
     fontWeight: 700,
-    color: '#2F5EA0',
+    color: theme.blueColor,
   },
   separator: {
     fontWeight: 900,
-    color: '#CDD1E3',
+    color: theme.greyColor,
     paddingHorizontal: 5,
   },
   distanceText: {
     fontWeight: 700,
-    color: '#08182F',
+    color: theme.darkBlueColor,
   },
   // Footer
   footer: {
@@ -121,7 +123,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 12,
     fontWeight: 700,
-    color: '#FF974D',
+    color: theme.orangeColor,
   },
 });
 

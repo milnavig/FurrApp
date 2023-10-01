@@ -10,6 +10,8 @@ import IconFeather from 'react-native-vector-icons/Feather';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { setDate } from '../redux/actions/formAction';
 
+import { theme } from './../styles/colors';
+
 export const DatePicker = () => {
   const [show, setShow] = useState(false);
   const dispatch = useDispatch();
@@ -61,8 +63,8 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: '#E9E8E8',
-    backgroundColor: '#fff',
+    borderColor: theme.borderColor,
+    backgroundColor: theme.whiteColor,
   },
   text: {
     fontFamily: 'Outfit', 
@@ -71,7 +73,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   calendarIcon: {
-    color: '#FF974D',
+    color: theme.orangeColor,
   },
 });
 
