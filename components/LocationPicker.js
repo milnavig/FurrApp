@@ -24,8 +24,8 @@ export const LocationPicker = () => {
     }
 
     const location = await Location.getCurrentPositionAsync({});
-    const { coords: { latitude, longitude }} = location;
-    console.log({ latitude, longitude });
+    const { coords: { latitude, longitude } } = location;
+    
     dispatch(setLocation({ latitude, longitude }))
   }
   
