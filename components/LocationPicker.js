@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import IconEvilIcons from 'react-native-vector-icons/EvilIcons';
 import * as Location from 'expo-location';
-import { setLocation } from '../redux/actions/formAction';
+import { setLocation } from '../features/form/formSlice';
 
 import { theme } from './../styles/colors';
 

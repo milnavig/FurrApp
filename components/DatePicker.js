@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import IconFeather from 'react-native-vector-icons/Feather';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { setDate } from '../redux/actions/formAction';
+import { setDate } from '../features/form/formSlice';
 
 import { theme } from './../styles/colors';
 

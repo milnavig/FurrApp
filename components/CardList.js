@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import Card from './Card';
-import { fill, fillFiltered } from '../redux/actions/listAction';
+import { setList, setFilteredList } from '../features/list/listSlice';
 
 import doctorsList from '../assets/doctors_data';
 import { theme } from './../styles/colors';
@@ -19,12 +19,12 @@ const CardList = () => {
 
   useEffect(() => {
     dispatch(
-      fill(doctorsList)
+      setList(doctorsList)
     );
   }, []);
 
   const viewAll = () => {
-    dispatch(fillFiltered(doctorsList));
+    dispatch(setFilteredList(doctorsList));
   }
 
   return (

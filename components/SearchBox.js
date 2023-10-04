@@ -8,8 +8,8 @@ import Dropdown from './Dropdown';
 import LocationPicker from './LocationPicker';
 import CustomButton from './CustomButton';
 
-import { fillFiltered } from '../redux/actions/listAction';
-import { setPurpose, setAnimal } from '../redux/actions/formAction';
+import { setFilteredList } from '../features/list/listSlice';
+import { setPurpose, setAnimal } from '../features/form/formSlice';
 
 import haversine from '../utils/haversineDistance';
 
@@ -69,7 +69,7 @@ const SearchBox = () => {
       return doctor.date === userDate;
     });
 
-    dispatch(fillFiltered(filteredList));
+    dispatch(setFilteredList(filteredList));
   }
 
   return (

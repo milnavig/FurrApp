@@ -9,7 +9,7 @@ import {
   ImageBackground 
 } from 'react-native';
 import { Provider } from 'react-redux';
-import { store } from './redux/store';
+import { store } from './store';
 
 import Menu from './components/Menu';
 import SearchBox from './components/SearchBox';
